@@ -82,7 +82,11 @@ export function normalizeContent(site) {
 }
 
 export async function loadSiteContent() {
-  const sources = ["/api/content", "/content/site.json"];
+  const isLocal =
+    location.hostname === "localhost" || location.hostname === "127.0.0.1";
+  const sources = isLocal
+    ? ["/api/content", "/content/site.json"]
+    : ["/content/site.json", "/api/content"];
   for (const url of sources) {
     try {
       const res = await fetch(url);

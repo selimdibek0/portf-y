@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV | Selim Dibek</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: #e8e6e1;
+      color: #1a1a18;
+      line-height: 1.5;
+      font-size: 11pt;
+    }
+    .toolbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+      background: #1a1d1b; color: #e8e6e1;
+      padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .toolbar p { font-size: 0.85rem; opacity: 0.8; }
+    .toolbar button {
+      background: #6db896; color: #111; border: none;
+      padding: 0.55rem 1.2rem; border-radius: 8px;
+      font-weight: 600; cursor: pointer; font-family: inherit;
+    }
+    .toolbar button:hover { filter: brightness(1.08); }
+    .page {
+      width: 210mm; min-height: 297mm;
+      margin: 4.5rem auto 2rem;
+      background: #fff;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+      padding: 14mm 16mm;
+    }
+    .header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.25rem;
+      align-items: center;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #2d4a3e;
+      margin-bottom: 1.25rem;
+    }
+    .photo {
+      width: 88px; height: 88px; border-radius: 50%;
+      object-fit: cover; border: 2px solid #2d4a3e;
+      background: #eeede9;
+      display: grid; place-items: center;
+      font-family: "Instrument Serif", serif;
+      font-size: 2rem; color: #2d4a3e;
+    }
+    .name {
+      font-family: "Instrument Serif", serif;
+      font-size: 2rem; font-weight: 400; line-height: 1.1;
+    }
+    .field { color: #2d4a3e; font-weight: 600; font-size: 0.85rem; margin-top: 0.25rem; }
+    .summary { color: #555; margin-top: 0.5rem; font-size: 0.9rem; max-width: 520px; }
+    .contact { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; margin-top: 0.6rem; font-size: 0.82rem; }
+    .contact a { color: #2d4a3e; text-decoration: none; }
+    .grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 1.5rem; }
+    h2 {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em;
+      color: #2d4a3e; margin-bottom: 0.65rem; font-weight: 700;
+      border-bottom: 1px solid #ddd; padding-bottom: 0.35rem;
+    }
+    .item { margin-bottom: 0.85rem; }
+    .item__title { font-weight: 600; font-size: 0.92rem; }
+    .item__meta { font-size: 0.78rem; color: #777; margin: 0.15rem 0; }
+    .item__text { font-size: 0.82rem; color: #444; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.35rem; }
+    .tag {
+      font-size: 0.68rem; padding: 0.15rem 0.5rem;
+      background: #eef5f1; color: #2d4a3e; border-radius: 100px;
+    }
+    .skill { margin-bottom: 0.5rem; }
+    .skill__name { font-weight: 600; font-size: 0.85rem; }
+    .skill__meta { font-size: 0.75rem; color: #777; }
+    .loading { text-align: center; padding: 4rem; color: #777; }
+  </style>
+  <style media="print">
+    body { background: #fff; }
+    .toolbar { display: none !important; }
+    .page { margin: 0; box-shadow: none; width: auto; min-height: auto; padding: 0; }
+    a { color: inherit; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <p>PDF kaydetmek için yazdır menüsünden <strong>PDF olarak kaydet</strong> seçin.</p>
+    <button type="button" onclick="window.print()">PDF Olarak Kaydet / Yazdır</button>
+  </div>
+  <div class="page" id="cv-root">
+    <p class="loading">CV yükleniyor...</p>
+  </div>
+  <script>
+    async function loadSite() {
+      for (const url of ["/api/content", "http://localhost:3001/api/content", "/content/site.json"]) {
+        try {
+          const res = await fetch(url);
+          if (res.ok) return res.json();
+        } catch {}
+      }
+      throw new Error("İçerik yüklenemedi");
+    }
+
+    function t(obj, lang = "tr") {
+      return typeof obj === "object" && obj?.[lang] ? obj[lang] : obj;
+    }
+
+    function render(site) {
+      const p = site.profile;
+      const lang = "tr";
+      const photo = p.photo
+        ? `<img class="photo" src="${p.photo}" alt="${p.name}" />`
+        : `<div class="photo">${p.initials}</div>`;
+
+      const contact = [
+        `<a href="mailto:${p.contact.email}">${p.contact.email}</a>`,
+        p.contact.github && `<a href="${p.contact.github}">GitHub</a>`,
+        p.contact.linkedin && `<a href="${p.contact.linkedin}">LinkedIn</a>`,
+      ].filter(Boolean).join("");
+
+      const timeline = site.timeline.map((item) => `
+        <div class="item">
+          <div class="item__title">${t(item.title, lang)}</div>
+          <div class="item__meta">${item.year} · ${t(item.period, lang)}</div>
+          <div class="item__text">${t(item.highlight, lang)}</div>
+        </div>`).join("");
+
+      const projects = site.projects.map((proj) => `
+        <div class="item">
+          <div class="item__title">${t(proj.title, lang)}</div>
+          <div class="item__meta">${proj.year}</div>
+          <div class="item__text">${t(proj.result, lang)}</div>
+          <div class="tags">${proj.stack.map((s) => `<span class="tag">${s}</span>`).join("")}</div>
+        </div>`).join("");
+
+      const skills = site.skills.map((s) => `
+        <div class="skill">
+          <div class="skill__name">${s.name}</div>
+          <div class="skill__meta">${s.duration} · ${t(s.projects, lang).join(", ")}</div>
+        </div>`).join("");
+
+      document.getElementById("cv-root").innerHTML = `
+        <header class="header">
+          ${photo}
+          <div>
+            <h1 class="name">${p.name}</h1>
+            <p class="field">${t(p.field, lang)}</p>
+            <p class="summary">${t(p.subtitle, lang)}</p>
+            <div class="contact">${contact}</div>
+          </div>
+        </header>
+        <div class="grid">
+          <section>
+            <h2>Eğitim & Deneyim</h2>
+            ${timeline}
+          </section>
+          <section>
+            <h2>Projeler</h2>
+            ${projects}
+            <h2 style="margin-top:1rem">Yetkinlikler</h2>
+            ${skills}
+          </section>
+        </div>`;
+
+      document.title = `CV | ${p.name}`;
+    }
+
+    loadSite()
+      .then(render)
+      .then(() => {
+        if (new URLSearchParams(location.search).get("print") === "1") {
+          setTimeout(() => window.print(), 500);
+        }
+      })
+      .catch(() => {
+        document.getElementById("cv-root").innerHTML =
+          "<p class='loading'>CV yüklenemedi. Sunucunun çalıştığından emin olun.</p>";
+      });
+  </script>
+</body>
+</html>

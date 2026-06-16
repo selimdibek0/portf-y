@@ -1,0 +1,6 @@
+Bu dosyayı kendi CV'nizle değiştirin.
+
+Dosya adı: cv.pdf
+Konum: public/cv.pdf
+
+Navigasyondaki "CV İndir" butonu bu dosyayı indirir.

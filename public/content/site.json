@@ -1,0 +1,598 @@
+{
+  "profile": {
+    "initials": "S.D.",
+    "name": "Selim Dibek",
+    "field": {
+      "tr": "Girne Üniversitesi · Yazılım Mühendisliği · 4. Sınıf",
+      "en": "Girne University · Software Engineering · Year 4"
+    },
+    "photo": "/uploads/1781638417773-4a9c0821.jpg",
+    "cvPdf": "/cv.html",
+    "badge": {
+      "tr": "Bitirme projesi hazırlığında",
+      "en": "Preparing graduation project"
+    },
+    "tagline": {
+      "tr": "Gerçek ihtiyaçları kullanılabilir yazılıma dönüştürmek — kod ile çözmek benim yöntemim.",
+      "en": "Turning real needs into usable software — solving with code is my approach."
+    },
+    "subtitle": {
+      "tr": "Web ve mobil tabanlı uygulamalar geliştiriyorum; araç kiralama, randevu sistemleri ve iş süreçlerini dijitalleştiren full-stack projeler üzerinde çalışıyorum.",
+      "en": "I build web and mobile applications; full-stack projects including car rental, booking systems, and business process digitization."
+    },
+    "metrics": [
+      {
+        "value": "3+",
+        "key": "projects"
+      },
+      {
+        "value": "3+",
+        "key": "experience"
+      },
+      {
+        "value": "8+",
+        "key": "stack"
+      }
+    ],
+    "contact": {
+      "email": "Selimdibek0@gmail.com",
+      "github": null,
+      "linkedin": null
+    }
+  },
+  "timeline": [
+    {
+      "id": "2022",
+      "year": "2022",
+      "icon": "🎓",
+      "tags": [
+        "Java",
+        "Algoritma",
+        "OOP"
+      ],
+      "period": {
+        "tr": "Girne Üniversitesi — 1. Yıl",
+        "en": "Girne University — Year 1"
+      },
+      "title": {
+        "tr": "Yazılım Mühendisliğine Giriş",
+        "en": "Entering Software Engineering"
+      },
+      "highlight": {
+        "tr": "Programlama temelleri, algoritma mantığı ve nesne yönelimli programlama dersleriyle mühendislik düşüncesini oluşturdum. İlk konsol uygulamalarımı ve takım çalışması projelerimi tamamladım.",
+        "en": "Built engineering thinking through programming fundamentals, algorithms, and OOP. Completed my first console apps and team projects."
+      },
+      "metric": {
+        "tr": "Temel mühendislik dersleri · 2 dönem projesi",
+        "en": "Core engineering courses · 2 semester projects"
+      }
+    },
+    {
+      "id": "2023",
+      "year": "2023",
+      "icon": "🌐",
+      "tags": [
+        "HTML/CSS",
+        "JavaScript",
+        "SQL"
+      ],
+      "period": {
+        "tr": "Girne Üniversitesi — 2. Yıl",
+        "en": "Girne University — Year 2"
+      },
+      "title": {
+        "tr": "Web Geliştirmeye Geçiş",
+        "en": "Transition to Web Development"
+      },
+      "highlight": {
+        "tr": "Veritabanı yönetimi ve web teknolojileri dersleriyle frontend–backend ayrımını öğrendim. REST API mantığını kavrayarak ilk tam yığın ödev projelerimi geliştirdim.",
+        "en": "Learned frontend–backend separation through database management and web technologies. Built my first full-stack assignment projects with REST API design."
+      },
+      "metric": {
+        "tr": "İlk web projeleri · Veritabanı tasarımı",
+        "en": "First web projects · Database design"
+      }
+    },
+    {
+      "id": "2024",
+      "year": "2024",
+      "icon": "⚡",
+      "tags": [
+        "React",
+        "Node.js",
+        "SQL",
+        "REST API"
+      ],
+      "period": {
+        "tr": "Girne Üniversitesi — 3. Yıl",
+        "en": "Girne University — Year 3"
+      },
+      "title": {
+        "tr": "Uygulama Geliştirme Dönemi",
+        "en": "Application Development Phase"
+      },
+      "highlight": {
+        "tr": "Araç kiralama ve spor salonu randevu uygulamalarını sıfırdan tasarlayıp geliştirdim. Kullanıcı yönetimi, rezervasyon akışları ve admin panellerini uçtan uca hayata geçirdim.",
+        "en": "Designed and built car rental and gym booking apps from scratch. Implemented user management, reservation flows, and admin panels end-to-end."
+      },
+      "metric": {
+        "tr": "2 ana proje · Full-stack geliştirme",
+        "en": "2 major projects · Full-stack development"
+      }
+    },
+    {
+      "id": "2025",
+      "year": "2025",
+      "icon": "🚀",
+      "tags": [
+        "Full-Stack",
+        "UI/UX",
+        "Bitirme Projesi"
+      ],
+      "period": {
+        "tr": "Girne Üniversitesi — 4. Sınıf",
+        "en": "Girne University — Year 4"
+      },
+      "title": {
+        "tr": "Bitirme & Profesyonelleşme",
+        "en": "Graduation & Professional Growth"
+      },
+      "highlight": {
+        "tr": "Son sınıfta mevcut projelerimi iyileştiriyor, yeni iş uygulamaları geliştiriyor ve bitirme projesi hazırlığı yapıyorum.",
+        "en": "In my final year I'm improving existing projects, building new business apps, and preparing my graduation project."
+      },
+      "metric": {
+        "tr": "Devam ediyor · Staj & iş birliği açık",
+        "en": "Ongoing · Open to internships & collaboration"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "car-rental",
+      "year": "2024",
+      "stack": [
+        "React",
+        "Node.js",
+        "Express",
+        "SQL"
+      ],
+      "screenshots": [
+        "/uploads/1781640920212-6c94a215.jpeg",
+        "/uploads/1781640925104-e3ba785b.jpeg",
+        "/uploads/1781640929691-19ab743c.jpeg"
+      ],
+      "demo": null,
+      "github": null,
+      "title": {
+        "tr": "Araç Kiralama Uygulaması",
+        "en": "Car Rental Application"
+      },
+      "subtitle": {
+        "tr": "Online Rezervasyon ve Filo Yönetim Sistemi",
+        "en": "Online Reservation & Fleet Management System"
+      },
+      "problem": {
+        "tr": "Küçük ölçekli kiralama firmaları araç müsaitliğini telefon veya defter üzerinden takip ediyordu; çakışan rezervasyonlar operasyonel verimsizlik yaratıyordu.",
+        "en": "Small rental companies tracked vehicle availability by phone or notebook; overlapping reservations hurt operational efficiency."
+      },
+      "solution": {
+        "tr": "Araç listeleme, tarih bazlı müsaitlik kontrolü, online rezervasyon ve admin paneli içeren full-stack bir uygulama geliştirdim.",
+        "en": "Built a full-stack app with vehicle listing, date-based availability, online booking, and admin panel."
+      },
+      "result": {
+        "tr": "Rezervasyon süreci tek platformda toplandı; müsaitlik kontrolü otomatikleşerek çakışma riski ortadan kalktı.",
+        "en": "Reservation process unified on one platform; automatic availability checks eliminated conflicts."
+      }
+    },
+    {
+      "id": "gym-booking",
+      "year": "2024",
+      "stack": [
+        "React",
+        "JavaScript",
+        "REST API",
+        "SQL"
+      ],
+      "screenshots": [
+        "/uploads/1781642245805-2-84d9f139da6c.jpeg"
+      ],
+      "demo": null,
+      "github": null,
+      "title": {
+        "tr": "Spor Salonu Randevu Uygulaması",
+        "en": "Gym Appointment App"
+      },
+      "subtitle": {
+        "tr": "Antrenör ve Seans Rezervasyon Platformu",
+        "en": "Trainer & Session Booking Platform"
+      },
+      "problem": {
+        "tr": "Antrenör seansları WhatsApp veya telefonla ayarlanıyordu; iptal edilen seanslar takip edilemiyordu.",
+        "en": "Trainer sessions were booked via WhatsApp or phone; cancellations weren't tracked."
+      },
+      "solution": {
+        "tr": "Üyelerin antrenör seçip tarih/saat bazlı randevu alabildiği bir web uygulaması tasarladım.",
+        "en": "Designed a web app where members pick trainers and book by date/time."
+      },
+      "result": {
+        "tr": "Randevu süreci dijitalleşti; üyeler 7/24 online rezervasyon yapabilir hale geldi.",
+        "en": "Booking went digital; members can reserve online 24/7."
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "category": "language",
+      "duration": "3+ yıl",
+      "intensity": "medium",
+      "projects": {
+        "tr": [
+          "Araç Kiralama",
+          "Randevu Uygulaması",
+          "Web Projeleri"
+        ],
+        "en": [
+          "Car Rental",
+          "Booking App",
+          "Web Projects"
+        ]
+      }
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "category": "frontend",
+      "duration": "18 ay",
+      "intensity": "medium",
+      "projects": {
+        "tr": [
+          "Araç Kiralama",
+          "Randevu Uygulaması",
+          "Bu Portföy"
+        ],
+        "en": [
+          "Car Rental",
+          "Booking App",
+          "This Portfolio"
+        ]
+      }
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "category": "backend",
+      "duration": "14 ay",
+      "intensity": "high",
+      "projects": {
+        "tr": [
+          "Araç Kiralama",
+          "REST API Projeleri"
+        ],
+        "en": [
+          "Car Rental",
+          "REST API Projects"
+        ]
+      }
+    },
+    {
+      "id": "sql",
+      "name": "SQL",
+      "category": "database",
+      "duration": "2+ yıl",
+      "intensity": "high",
+      "projects": {
+        "tr": [
+          "Tüm Web Uygulamaları"
+        ],
+        "en": [
+          "All Web Applications"
+        ]
+      }
+    },
+    {
+      "id": "htmlcss",
+      "name": "HTML / CSS",
+      "category": "frontend",
+      "duration": "3+ yıl",
+      "intensity": "medium",
+      "projects": {
+        "tr": [
+          "Tüm Projeler"
+        ],
+        "en": [
+          "All Projects"
+        ]
+      }
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "category": "language",
+      "duration": "2 yıl",
+      "intensity": "medium",
+      "projects": {
+        "tr": [
+          "Üniversite Projeleri",
+          "OOP Dersleri"
+        ],
+        "en": [
+          "University Projects",
+          "OOP Courses"
+        ]
+      }
+    },
+    {
+      "id": "restapi",
+      "name": "REST API",
+      "category": "architecture",
+      "duration": "12 ay",
+      "intensity": "medium",
+      "projects": {
+        "tr": [
+          "Araç Kiralama",
+          "Randevu Sistemi"
+        ],
+        "en": [
+          "Car Rental",
+          "Booking System"
+        ]
+      }
+    }
+  ],
+  "library": [
+    {
+      "id": "clean-code",
+      "type": "reading",
+      "status": "reading",
+      "title": {
+        "tr": "Clean Code",
+        "en": "Clean Code"
+      },
+      "author": {
+        "tr": "Robert C. Martin",
+        "en": "Robert C. Martin"
+      },
+      "note": {
+        "tr": "Okunabilir kod prensiplerini projelerime uyguluyorum.",
+        "en": "Applying readable code principles to my projects."
+      }
+    },
+    {
+      "id": "fullstack-trend",
+      "type": "trend",
+      "status": "following",
+      "title": {
+        "tr": "Full-Stack Web Mimarileri",
+        "en": "Full-Stack Web Architectures"
+      },
+      "author": {
+        "tr": "Sektör Trendi",
+        "en": "Industry Trend"
+      },
+      "note": {
+        "tr": "React + Node.js ekosistemindeki modern kalıpları takip ediyorum.",
+        "en": "Following modern patterns in the React + Node.js ecosystem."
+      }
+    },
+    {
+      "id": "user-first",
+      "type": "thought",
+      "status": "thinking",
+      "title": {
+        "tr": "Kullanıcı Önce Tasarım",
+        "en": "User-First Design"
+      },
+      "author": {
+        "tr": "Kişisel Not",
+        "en": "Personal Note"
+      },
+      "note": {
+        "tr": "Özelliği kodlamadan önce kullanıcı akışını haritalamak.",
+        "en": "Mapping user flow before coding a feature."
+      }
+    },
+    {
+      "id": "ddia",
+      "type": "reading",
+      "status": "reading",
+      "title": {
+        "tr": "Designing Data-Intensive Applications",
+        "en": "Designing Data-Intensive Applications"
+      },
+      "author": {
+        "tr": "Martin Kleppmann",
+        "en": "Martin Kleppmann"
+      },
+      "note": {
+        "tr": "Bitirme projesi için veri modelleme referansı.",
+        "en": "Reference for data modeling in my graduation project."
+      }
+    }
+  ],
+  "ui": {
+    "tr": {
+      "meta": {
+        "description": "Selim Dibek — Girne Üniversitesi Yazılım Mühendisliği portföyü",
+        "title": "Portföy | Selim Dibek"
+      },
+      "nav": {
+        "timeline": "Zaman Tüneli",
+        "projects": "Projeler",
+        "skills": "Yetkinlikler",
+        "library": "Kütüphane",
+        "contact": "İletişim",
+        "cv": "CV İndir",
+        "theme": "Tema değiştir",
+        "menu": "Menü"
+      },
+      "hero": {
+        "ctaProjects": "Vaka Analizlerini İncele",
+        "ctaTimeline": "Zaman Tüneli",
+        "scroll": "Aşağı kaydır",
+        "photoAlt": "Selim Dibek profil fotoğrafı",
+        "photoPlaceholder": "Fotoğraf eklenecek",
+        "metrics": {
+          "projects": "Tamamlanan Proje",
+          "experience": "Yıllık Deneyim",
+          "stack": "Aktif Teknoloji"
+        }
+      },
+      "timeline": {
+        "tag": "Akıllı CV",
+        "title": "Zaman Tüneli",
+        "desc": "Yıllar arasında kaydırın veya tıklayın — her dönemin hikayesini keşfedin.",
+        "placeholderTitle": "Bir dönem seçin",
+        "placeholderDesc": "Zaman çizgisindeki kartlara tıklayarak detayları görüntüleyin.",
+        "ariaLabel": "Kariyer zaman tüneli",
+        "prevLabel": "Önceki dönem",
+        "nextLabel": "Sonraki dönem",
+        "metricLabel": "Öne çıkan"
+      },
+      "projects": {
+        "tag": "Vaka Analizi",
+        "title": "Projeler",
+        "desc": "Her proje bir problem, bir çözüm ve ölçülebilir bir sonuç hikayesidir.",
+        "problem": "Problem",
+        "solution": "Çözüm",
+        "result": "Sonuç",
+        "demo": "Canlı Demo",
+        "github": "GitHub",
+        "screenshotPlaceholder": "Ekran görüntüsü eklenecek"
+      },
+      "skills": {
+        "tag": "Yetkinlik Haritası",
+        "title": "Araçlar & Diller",
+        "desc": "Hangi projede, ne kadar süreyle aktif kullandığım.",
+        "categories": {
+          "language": "Dil",
+          "frontend": "Frontend",
+          "backend": "Backend",
+          "database": "Veritabanı",
+          "hardware": "Donanım",
+          "devops": "DevOps",
+          "architecture": "Mimari",
+          "tool": "Araç"
+        }
+      },
+      "library": {
+        "tag": "Düşünce Köşesi",
+        "title": "Dijital Kütüphane",
+        "desc": "Okuduklarım, trendler ve düşünceler.",
+        "types": {
+          "reading": "Okuma",
+          "trend": "Trend",
+          "thought": "Düşünce"
+        },
+        "statuses": {
+          "reading": "Okunuyor",
+          "following": "Takip Ediliyor",
+          "thinking": "Üzerinde Düşünüyorum"
+        }
+      },
+      "contact": {
+        "title": "Birlikte üretelim.",
+        "text": "Proje fikirleri, staj veya iş birliği için her zaman açığım.",
+        "email": "E-posta",
+        "github": "GitHub",
+        "linkedin": "LinkedIn"
+      },
+      "footer": {
+        "note": "Ağırbaşlı Yenilikçilik"
+      }
+    },
+    "en": {
+      "meta": {
+        "description": "Selim Dibek — Software Engineering Portfolio, Girne University",
+        "title": "Portfolio | Selim Dibek"
+      },
+      "nav": {
+        "timeline": "Timeline",
+        "projects": "Projects",
+        "skills": "Skills",
+        "library": "Library",
+        "contact": "Contact",
+        "cv": "Download CV",
+        "theme": "Toggle theme",
+        "menu": "Menu"
+      },
+      "hero": {
+        "ctaProjects": "View Case Studies",
+        "ctaTimeline": "Timeline",
+        "scroll": "Scroll down",
+        "photoAlt": "Selim Dibek profile photo",
+        "photoPlaceholder": "Photo coming soon",
+        "metrics": {
+          "projects": "Completed Projects",
+          "experience": "Years of Experience",
+          "stack": "Active Technologies"
+        }
+      },
+      "timeline": {
+        "tag": "Smart CV",
+        "title": "Timeline",
+        "desc": "Swipe or click through the years — discover each chapter of the journey.",
+        "placeholderTitle": "Select a period",
+        "placeholderDesc": "Click cards on the timeline to view details.",
+        "ariaLabel": "Career timeline",
+        "prevLabel": "Previous period",
+        "nextLabel": "Next period",
+        "metricLabel": "Highlight"
+      },
+      "projects": {
+        "tag": "Case Study",
+        "title": "Projects",
+        "desc": "Every project is a story of problem, solution, and measurable outcome.",
+        "problem": "Problem",
+        "solution": "Solution",
+        "result": "Result",
+        "demo": "Live Demo",
+        "github": "GitHub",
+        "screenshotPlaceholder": "Screenshot coming soon"
+      },
+      "skills": {
+        "tag": "Skills Map",
+        "title": "Tools & Languages",
+        "desc": "Which projects I used them in and for how long.",
+        "categories": {
+          "language": "Language",
+          "frontend": "Frontend",
+          "backend": "Backend",
+          "database": "Database",
+          "hardware": "Hardware",
+          "devops": "DevOps",
+          "architecture": "Architecture",
+          "tool": "Tool"
+        }
+      },
+      "library": {
+        "tag": "Thinking Corner",
+        "title": "Digital Library",
+        "desc": "What I'm reading, trends I follow, and ideas I'm exploring.",
+        "types": {
+          "reading": "Reading",
+          "trend": "Trend",
+          "thought": "Thought"
+        },
+        "statuses": {
+          "reading": "Reading",
+          "following": "Following",
+          "thinking": "Thinking About"
+        }
+      },
+      "contact": {
+        "title": "Let's build together.",
+        "text": "Always open to project ideas, internships, or collaboration.",
+        "email": "Email",
+        "github": "GitHub",
+        "linkedin": "LinkedIn"
+      },
+      "footer": {
+        "note": "Measured Innovation"
+      }
+    }
+  },
+  "updatedAt": "2026-06-16T20:39:16.410Z"
+}

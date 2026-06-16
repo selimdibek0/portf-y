@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Selim Dibek — Girne Üniversitesi Yazılım Mühendisliği portföyü" />
+    <title>Portföy | Selim Dibek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#hero" class="nav__logo">S.D.</a>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#timeline" data-i18n="nav.timeline">Zaman Tüneli</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projeler</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Yetkinlikler</a></li>
+          <li><a href="#library" data-i18n="nav.library">Kütüphane</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">İletişim</a></li>
+        </ul>
+        <div class="nav__actions">
+          <div class="lang-toggle" role="group" aria-label="Dil seçimi">
+            <button class="lang-toggle__btn active" data-lang="tr" type="button">TR</button>
+            <button class="lang-toggle__btn" data-lang="en" type="button">EN</button>
+          </div>
+          <a href="/cv.html" class="btn btn--cv" id="cv-download" target="_blank" rel="noopener noreferrer" data-i18n="nav.cv">CV İndir</a>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Tema değiştir" type="button">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <button class="nav__burger" id="nav-burger" aria-label="Menü" type="button">
+            <span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="hero">
+        <div class="container hero__layout">
+          <div class="hero__photo reveal hero__photo--empty" id="hero-photo">
+            <div class="hero__photo-inner"></div>
+          </div>
+          <div class="hero__content">
+          <p class="hero__eyebrow reveal"></p>
+          <h1 class="hero__title reveal"></h1>
+            <p class="hero__subtitle reveal"></p>
+            <div class="hero__metrics reveal" id="hero-metrics"></div>
+            <div class="hero__cta reveal">
+              <a href="#projects" class="btn btn--primary" data-i18n="hero.ctaProjects">Vaka Analizlerini İncele</a>
+              <a href="#timeline" class="btn btn--ghost" data-i18n="hero.ctaTimeline">Zaman Tüneli</a>
+            </div>
+            <div class="hero__scroll reveal" aria-hidden="true">
+              <span data-i18n="hero.scroll">Aşağı kaydır</span>
+              <div class="hero__scroll-line"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline section" id="timeline">
+        <div class="container">
+          <header class="section__header reveal">
+            <span class="section__tag" data-i18n="timeline.tag">Akıllı CV</span>
+            <h2 class="section__title" data-i18n="timeline.title">Zaman Tüneli</h2>
+            <p class="section__desc" data-i18n="timeline.desc"></p>
+          </header>
+          <div class="timeline__wrapper reveal" id="timeline-panel" tabindex="0">
+            <div class="timeline__rail">
+              <button type="button" class="timeline__nav timeline__nav--prev" id="timeline-prev" aria-label="Önceki dönem">‹</button>
+              <div class="timeline__track-outer">
+                <div class="timeline__progress" aria-hidden="true">
+                  <div class="timeline__progress-fill" id="timeline-progress"></div>
+                </div>
+                <div class="timeline__track" id="timeline-track" role="tablist"></div>
+              </div>
+              <button type="button" class="timeline__nav timeline__nav--next" id="timeline-next" aria-label="Sonraki dönem">›</button>
+            </div>
+            <article class="timeline__detail" id="timeline-detail" aria-live="polite"></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section" id="projects">
+        <div class="container">
+          <header class="section__header reveal">
+            <span class="section__tag" data-i18n="projects.tag">Vaka Analizi</span>
+            <h2 class="section__title" data-i18n="projects.title">Projeler</h2>
+            <p class="section__desc" data-i18n="projects.desc"></p>
+          </header>
+          <div class="projects__grid" id="projects-grid"></div>
+        </div>
+      </section>
+
+      <section class="skills section" id="skills">
+        <div class="container">
+          <header class="section__header reveal">
+            <span class="section__tag" data-i18n="skills.tag">Yetkinlik Haritası</span>
+            <h2 class="section__title" data-i18n="skills.title">Araçlar & Diller</h2>
+            <p class="section__desc" data-i18n="skills.desc"></p>
+          </header>
+          <div class="skills__map" id="skills-map"></div>
+        </div>
+      </section>
+
+      <section class="library section" id="library">
+        <div class="container">
+          <header class="section__header reveal">
+            <span class="section__tag" data-i18n="library.tag">Düşünce Köşesi</span>
+            <h2 class="section__title" data-i18n="library.title">Dijital Kütüphane</h2>
+            <p class="section__desc" data-i18n="library.desc"></p>
+          </header>
+          <div class="library__grid" id="library-grid"></div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="container contact__inner reveal">
+          <h2 class="contact__title" data-i18n="contact.title">Birlikte üretelim.</h2>
+          <p class="contact__text" data-i18n="contact.text"></p>
+          <div class="contact__links" id="contact-links"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__name">© <span id="year"></span> Selim Dibek</p>
+        <p class="footer__note" data-i18n="footer.note">Ağırbaşlı Yenilikçilik</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

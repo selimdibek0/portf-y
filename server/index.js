@@ -32,7 +32,12 @@ import {
 dotenv.config();
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
+const ROOT = join(__dirname, "..");
+const DIST_DIR = join(ROOT, "dist");
+const isProd = process.env.NODE_ENV === "production";
+
 const app = express();
+app.set("trust proxy", 1);
 const PORT = process.env.PORT || 3001;
 
 initStorage();
@@ -92,8 +97,6 @@ app.get("/cv.pdf", (_req, res) => {
   }
   res.redirect("/cv.html?print=1");
 });
-
-app.use(express.static(join(__dirname, "..", "public")));
 
 function setAdminPassword(password, extra = {}) {
   const { salt, hash } = hashPassword(password);
@@ -217,6 +220,10 @@ app.post("/api/auth/password", authMiddleware, (req, res) => {
 });
 
 // ─── Content ─────────────────────────────────────────────────────────────────
+app.get("/api/health", (_req, res) => {
+  res.json({ ok: true, env: isProd ? "production" : "development" });
+});
+
 app.get("/api/content", (_req, res) => {
   res.json(readContent());
 });
@@ -292,8 +299,20 @@ app.post("/api/backup/import", authMiddleware, (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`API sunucusu http://localhost:${PORT} (oturum: ${SERVER_BOOT_ID.slice(0, 8)}…)`);
+// ─── Statik site (production: dist, geliştirme: public) ───────────────────────
+if (isProd && existsSync(DIST_DIR)) {
+  app.use(express.static(DIST_DIR));
+  app.get(["/admin", "/admin/"], (_req, res) => {
+    res.sendFile(join(DIST_DIR, "admin", "index.html"));
+  });
+} else {
+  app.use(express.static(PUBLIC_DIR));
+}
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(
+    `Sunucu http://0.0.0.0:${PORT} (${isProd ? "production" : "development"}, oturum: ${SERVER_BOOT_ID.slice(0, 8)}…)`
+  );
 }).on("error", (err) => {
   if (err.code === "EADDRINUSE") {
     console.error(

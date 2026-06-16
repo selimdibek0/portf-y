@@ -51,7 +51,50 @@ npm start
 
 Admin paneli ve içerik düzenleme için Node.js sunucusunun çalışması gerekir.
 
-## Netlify (Canlı site)
+## Render (Önerilen — site + admin birlikte)
+
+Render hem portföy sitesini hem admin panelini tek serviste çalıştırır.
+
+### Render ayarları
+
+| Alan | Değer |
+|------|--------|
+| **Language** | Node |
+| **Build Command** | `npm ci --include=dev && npm run build` |
+| **Start Command** | `npm start` |
+| **Health Check Path** | `/api/health` |
+
+`render.yaml` dosyası bu ayarları otomatik uygular (Blueprint deploy).
+
+### Environment Variables (Render paneli)
+
+| Key | Değer | Zorunlu |
+|-----|--------|---------|
+| `ADMIN_PASSWORD` | Admin giriş şifreniz (min. 8 karakter) | **Evet** |
+| `NODE_ENV` | `production` | Evet (Render genelde otomatik ekler) |
+| `PORT` | — | **Eklemeyin** — Render otomatik atar |
+
+**Add from .env** ile yapıştıracaksanız sadece şunu kullanın:
+
+```env
+ADMIN_PASSWORD=guclu_sifreniz_buraya
+NODE_ENV=production
+```
+
+> `PORT` satırını Render'a eklemeyin; platform kendi portunu verir.
+
+### Canlı adresler (Render URL'niz `https://portfoy-xxxx.onrender.com` ise)
+
+- **Site:** `https://portfoy-xxxx.onrender.com/`
+- **Admin:** `https://portfoy-xxxx.onrender.com/admin/`
+
+### Önemli notlar
+
+- **Ücretsiz planda** sunucu 15 dk hareketsizlikten sonra uyur; ilk ziyaret 30–60 sn sürebilir.
+- **Yüklenen dosyalar** (fotoğraf vb.) redeploy sonrası silinebilir (geçici disk). Kalıcı depolama için Render Disk ekleyin veya görselleri GitHub'a commit edin.
+- Netlify yerine Render kullanıyorsanız admin paneli de çalışır; ayrı API sunucusu gerekmez.
+
+## Netlify (Sadece statik site)
 
 Netlify **statik site** barındırır. Portföy sayfası çalışır; **admin paneli Netlify'da çalışmaz** (Express API gerekir).
 

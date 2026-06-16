@@ -46,7 +46,7 @@ async function api(path, options = {}) {
       err.message.includes("fetch");
     if (isNetwork) {
       throw new Error(
-        "Sunucuya bağlanılamadı. baslat.bat ile projeyi yeniden başlatın ve http://localhost:5173/admin/ adresini kullanın."
+        "Sunucuya bağlanılamadı. Sunucunun çalıştığından emin olun ve sayfayı yenileyin."
       );
     }
     throw err;

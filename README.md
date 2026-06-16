@@ -60,7 +60,7 @@ Render hem portföy sitesini hem admin panelini tek serviste çalıştırır.
 | Alan | Değer |
 |------|--------|
 | **Language** | Node |
-| **Build Command** | `npm ci --include=dev && npm run build` |
+| **Build Command** | `npm install && npm run build` |
 | **Start Command** | `npm start` |
 | **Health Check Path** | `/api/health` |
 
